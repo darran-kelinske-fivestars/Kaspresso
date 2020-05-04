@@ -35,7 +35,7 @@ dependencies {
     androidTestImplementation(Dependencies.rules)
     androidTestImplementation(Dependencies.junit)
     androidTestImplementation(Dependencies.espressoCore)
-    androidTestImplementation(Dependencies.espressoWeb)
+    androidTestImplementation(project(Dependencies.espressoWeb))
     androidTestImplementation(Dependencies.kakao)
     androidTestImplementation(project(":kaspresso"))
     androidTestImplementation(project(":kautomator"))
