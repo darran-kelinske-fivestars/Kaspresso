@@ -28,7 +28,7 @@ dependencies {
 
     implementation(Dependencies.rules)
     implementation(Dependencies.espressoCore)
-    implementation(Dependencies.espressoWeb)
+    implementation(project(Dependencies.espressoWeb))
     implementation(Dependencies.uiAutomator)
     implementation(Dependencies.kakao)
     implementation(Dependencies.gson)

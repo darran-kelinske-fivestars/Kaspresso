@@ -4,5 +4,6 @@ include(
     ":kautomator",
     ":sample",
     ":sample-kautomator",
-    ":sample-upgrade-tests"
+    ":sample-upgrade-tests",
+    ":espresso-web-3.3.0-beta01-fivestars"
 )

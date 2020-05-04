@@ -67,7 +67,7 @@ object Dependencies {
     const val truth = "com.google.truth:truth:${Versions.truth}"
 
     const val espressoCore = "androidx.test.espresso:espresso-core:${Versions.espresso}"
-    const val espressoWeb = "androidx.test.espresso:espresso-web:${Versions.espresso}"
+    const val espressoWeb = ":espresso-web-3.3.0-beta01-fivestars"
     const val kakao = "com.agoda.kakao:kakao:${Versions.kakao}"
 
     const val uiAutomator = "androidx.test.uiautomator:uiautomator:${Versions.uiAutomator}"
