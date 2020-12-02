@@ -1,9 +1,20 @@
 include(
     ":allure-model",
+
+    ":adb-server:adbserver-command-types",
+    ":adb-server:adbserver-common",
+    ":adb-server:adbserver-connection",
+    ":adb-server:adbserver-desktop",
+    ":adb-server:adbserver-desktop-device-connection",
+    ":adb-server:adbserver-device",
+
     ":kaspresso",
     ":kautomator",
-    ":sample",
-    ":sample-kautomator",
-    ":sample-upgrade-tests",
+
+    ":samples:adbserver-sample",
+    ":samples:kaspresso-sample",
+    ":samples:kautomator-sample",
+    ":samples:kautomator-sample-app-upgrade"
+        
     ":espresso-web-3.3.0-beta01-fivestars"
 )

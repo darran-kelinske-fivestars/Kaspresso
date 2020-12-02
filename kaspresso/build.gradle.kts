@@ -1,10 +1,8 @@
 import Dependencies.Versions
-import org.jetbrains.dokka.gradle.DokkaTask
 
 plugins {
     androidLibrary
     kotlinAndroid
-    dokka
 }
 
 android {
@@ -24,8 +22,8 @@ android {
 
 dependencies {
     api(fileTree("libs").matching{ include("*.jar") })
-    api(Dependencies.adbServer)
 
+    implementation(Dependencies.kotlinStdlib)
     implementation(Dependencies.rules)
     implementation(Dependencies.espressoCore)
     implementation(project(Dependencies.espressoWeb))
@@ -33,31 +31,22 @@ dependencies {
     implementation(Dependencies.kakao)
     implementation(Dependencies.gson)
     implementation(Dependencies.androidXCore)
-    implementation(project(":kautomator"))
+    implementation(project(Projects.Kautomator.framework))
+    implementation(project(Projects.AdbServer.device)) { isTransitive = false }
 
     testImplementation(Dependencies.junit)
     testImplementation(Dependencies.truth)
 }
 
 tasks {
-    val dokka by getting(DokkaTask::class) {
-        outputFormat = "gfm"
-        outputDirectory = "$rootDir/docs"
-
-        configuration {
-            reportUndocumented = true
-        }
-    }
-
     val sourcesJar by registering(Jar::class) {
         archiveClassifier.set("sources")
         from(android.sourceSets.getByName("main").java.srcDirs)
     }
 
     val javadocJar by registering(Jar::class) {
-        dependsOn(dokka)
         archiveClassifier.set("javadoc")
-        from(dokka.outputDirectory)
+        from(dokkaJavadoc.get().outputDirectory.get())
     }
 }
 
