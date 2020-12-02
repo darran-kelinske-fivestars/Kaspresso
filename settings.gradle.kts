@@ -14,7 +14,7 @@ include(
     ":samples:adbserver-sample",
     ":samples:kaspresso-sample",
     ":samples:kautomator-sample",
-    ":samples:kautomator-sample-app-upgrade"
-        
+    ":samples:kautomator-sample-app-upgrade",
+
     ":espresso-web-3.3.0-beta01-fivestars"
 )
