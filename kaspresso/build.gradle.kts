@@ -28,7 +28,7 @@ dependencies {
     implementation(Dependencies.espressoCore)
     implementation(project(Dependencies.espressoWeb))
     implementation(Dependencies.uiAutomator)
-    implementation(Dependencies.kakao)
+    implementation(project(Dependencies.kakao))
     implementation(Dependencies.gson)
     implementation(Dependencies.androidXCore)
     implementation(project(Projects.Kautomator.framework))

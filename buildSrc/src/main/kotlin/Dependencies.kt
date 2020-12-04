@@ -67,6 +67,7 @@ object Dependencies {
 
     const val testCore = "androidx.test:core:${Versions.testCore}"
     const val runner = "androidx.test:runner:${Versions.runner}"
+
     const val orchestrator = "androidx.test:orchestrator:${Versions.runner}"
     const val rules = "androidx.test:rules:${Versions.runner}"
 
@@ -75,8 +76,8 @@ object Dependencies {
     const val truth = "com.google.truth:truth:${Versions.truth}"
 
     const val espressoCore = "androidx.test.espresso:espresso-core:${Versions.espresso}"
-    const val espressoWeb = ":espresso-web-3.3.0-beta01-fivestars"
-    const val kakao = "com.agoda.kakao:kakao:${Versions.kakao}"
+    const val espressoWeb = ":espresso-web-3.3.0"
+    const val kakao = ":kakao-release"
 
     const val uiAutomator = "androidx.test.uiautomator:uiautomator:${Versions.uiAutomator}"
 }

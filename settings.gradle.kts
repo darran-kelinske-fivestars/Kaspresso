@@ -16,5 +16,6 @@ include(
     ":samples:kautomator-sample",
     ":samples:kautomator-sample-app-upgrade",
 
-    ":espresso-web-3.3.0-beta01-fivestars"
+    ":espresso-web-3.3.0",
+    ":kakao-release"
 )
